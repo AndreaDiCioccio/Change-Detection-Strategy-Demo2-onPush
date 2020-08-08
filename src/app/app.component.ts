@@ -19,17 +19,17 @@ export class AppComponent implements OnChanges {
         name: 'Paperino'
     }
 
-    //it is not called in this parent component because it is used only for @Input properties
+    // it is not called in this parent component because it is used only for @Input properties
     ngOnChanges(changes: SimpleChanges){
         console.log('appComponent --> change detect')
     }
 
-    //don't change object reference
+    // don't change object reference
     changeName1(){
         this.person.name = 'Gastone'
     }
 
-    //change object reference
+    // change object reference
     changeName2(){
         this.person = {
             name: 'Zio Paperone'
@@ -40,7 +40,7 @@ export class AppComponent implements OnChanges {
 
     }
 
-    //it is called to every rendering
+    // it is called to every rendering
     cd(){
         console.log('appComponent --> rendering')
     }
