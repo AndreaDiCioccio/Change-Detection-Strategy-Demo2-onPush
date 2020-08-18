@@ -13,8 +13,8 @@ import { Component, Input, OnChanges, SimpleChanges, DoCheck, ChangeDetectionStr
 
 export class ChildComponent implements OnChanges {
 
-    // con la CD onPush si aggiornata solo in caso di cambio di referenza dell' oggetto, 
-    // ovvero quando si esegue la funzione changeName2() del parent component
+    // CD OnPush lets update @Input only in case the object changes reference, 
+    // then in case of "Change Object Reference" click in the parent component
     @Input() person
     
     //it is called whenever CD detects changes in @Input values
@@ -22,10 +22,7 @@ export class ChildComponent implements OnChanges {
         console.log('childComponent --> change detect')
     }
 
-    // chiama la renderizzazione solo di questo componente
-    doNothing(){
-        
-    }
+    doNothing(){}
 
     //it is called to every rendering
     cd(){
