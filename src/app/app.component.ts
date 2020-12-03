@@ -5,8 +5,8 @@ import { Component, OnChanges, SimpleChanges } from '@angular/core';
     template: `
         <h1>OnPUsh Change Detection Strategy Demo</h1>
         <h3>name: {{person.name}}</h3>
-        <button (click)="changeName1()">Chanage Property Value</button>
-        <button (click)="changeName2()">Chanage Object Reference</button>
+        <button (click)="changePropertyValue()">Chanage Property Value</button>
+        <button (click)="changeObjectReference()">Chanage Object Reference</button>
         <button (click)="doNothing()">Do Nothing</button>
         <app-child [person]="person"></app-child>
         {{cd()}}
@@ -25,12 +25,12 @@ export class AppComponent implements OnChanges {
     }
 
     // don't change object reference
-    changeName1(){
+    changePropertyValue(){
         this.person.name = 'Gastone'
     }
 
     // change object reference
-    changeName2(){
+    changeObjectReference(){
         this.person = {
             name: 'Zio Paperone'
         }
